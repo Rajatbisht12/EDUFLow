@@ -1,0 +1,313 @@
+.landing-page {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 94%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: #2563eb;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 8rem 5% 5rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 5rem 5%;
+    text-align: center;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .feature-card {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Pricing Section */
+  .pricing {
+    padding: 5rem 5%;
+    background-color: #f8fafc;
+    text-align: center;
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .price-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .price-card.featured {
+    background: #064de7;
+    color: rgb(234, 214, 214);
+    transform: scale(1.05);
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  
+  .price span {
+    font-size: 1rem;
+    color: #ab9696;
+  }
+  
+  .price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  
+  .price-card li {
+    margin: 1rem 0;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #1e40af;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-demo {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* CTA Section */
+  .cta {
+    padding: 5rem 5%;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+    }
+    
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .price-card.featured {
+      transform: none;
+    }
+  }
+  /* Pricing Tabs Container */
+.pricing-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto 3rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  border: 1px solid rgba(230, 232, 236, 0.8);
+}
+
+/* Tab Buttons */
+.tab-button {
+  position: relative;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  min-width: 200px;
+}
+
+/* Active Tab State */
+.tab-button.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+/* Hover Effects */
+.tab-button:hover:not(.active) {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+/* Click Effect */
+.tab-button:active {
+  transform: scale(0.98);
+}
+
+/* Glow Effect for Active Tab */
+.tab-button.active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  border-radius: 0.85rem;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(8px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-tabs {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      max-width: 90%;
+  }
+
+  .tab-button {
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+  }
+}
+
+/* Optional Animation for Tab Switch */
+@keyframes tabFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.tab-button {
+  animation: tabFadeIn 0.3s ease-out;
+}
